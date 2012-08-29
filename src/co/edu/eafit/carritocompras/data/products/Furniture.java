@@ -8,7 +8,7 @@ public class Furniture extends Product {
 
 	@Override
 	public BigDecimal calculateDiscount() {
-		return this.getPrice().multiply(new BigDecimal(0.1));
+		return this.getPrice().multiply(new BigDecimal(0.05));
 	}
 	
 	
