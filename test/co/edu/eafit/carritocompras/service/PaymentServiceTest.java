@@ -1,5 +1,7 @@
 package co.edu.eafit.carritocompras.service;
 
+import java.math.BigDecimal;
+
 import junit.framework.Assert;
 
 import org.junit.Before;
@@ -14,9 +16,10 @@ public class PaymentServiceTest {
 	private Customer customer;
 	private PaymentService paymentService;
 	
+	
 	@Before
 	public void setUp() {
-		customer = new Customer("xx1", "xxName");
+		customer = new Customer("xx1", "xxName", 2);
 		paymentService = new PaymentService();
 	}
 	
@@ -30,7 +33,10 @@ public class PaymentServiceTest {
 		Assert.assertTrue(creditCardService.pay("xxxx111xxxx", p.getTotalPrice()));
 		
 	//	paymentService.pay(customer, p, "xxxx111xxxx", creditCardService);
+	
 		
+		
+	
 	}
 
 }

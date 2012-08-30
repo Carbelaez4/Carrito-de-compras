@@ -11,7 +11,7 @@ import co.edu.eafit.carritocompras.service.PaymentService;
 public class ClientApp {
 
 	public static void main(String[] args) {
-		Customer customer1 = new Customer("1", "John Doe");
+		Customer customer1 = new Customer("1", "John Doe",2);
 		
 		Purchase purchase = BillingCalculator.calculateTotalPurchase(customer1,
 				"EL-001,EL-004,FU-007");

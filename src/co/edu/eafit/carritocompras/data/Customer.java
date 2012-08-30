@@ -7,14 +7,27 @@ public class Customer {
 	private String code;
 	private String name;
 	private List<Purchase> purchases;
+	private int points;
 
-	public Customer(String code, String name) {
+	public Customer(String code, String name,int points) {
 		super();
 		this.code = code;
 		this.name = name;
+		this.points = points;
 	}
 
-	public String getCode() {
+	public int getpoints() {
+    	return points;
+    	
+    } 
+	
+	public void setpoints(int points) {
+	
+	this.points = points;
+
+	}
+	
+    public String getCode() {
 		return code;
 	}
 
