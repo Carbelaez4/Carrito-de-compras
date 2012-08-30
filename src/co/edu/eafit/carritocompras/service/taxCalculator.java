@@ -4,18 +4,16 @@ import java.math.BigDecimal;
 
 import co.edu.eafit.carritocompras.data.Purchase;
 
-public class taxCalculator {
+public class TaxCalculator {
 
 	
-	public void calculateIva (Purchase purchase) {
-		
-		BigDecimal totalPrice;
-		float iva;
-		totalPrice = purchase.getTotalPrice();
-		iva = (float) (totalPrice.floatValue() * 0.16);
-		purchase.setIva(iva);
+	public BigDecimal calculateIva (Purchase purchase) {
 	
+	BigDecimal iva = BigDecimal.ZERO;
+	
+	// Logica de web service
 		
+	return iva;
 		
 	}
 }
