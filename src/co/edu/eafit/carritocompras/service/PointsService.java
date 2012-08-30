@@ -10,25 +10,23 @@ import co.edu.eafit.carritocompras.data.Purchase;
 public class PointsService {
 	
 		 public int calculatePoints (Purchase purchase, Customer customer) {
-			 
-			     int points = 0;
+	  //calcular
+		 int pPurch = 0;
 	
-			 
-			 /*		 	  	
-	  BigDecimal totalPrice;
+		 BigDecimal totalPrice;
 	  
-      int  points;                       LLamar web service
+                       
+	 totalPrice = purchase.getTotalPrice();
 			 	  	
-	  totalPrice = purchase.getTotalPrice();
-			 	  	
-			    points = (totalPrice.intValue() / 1000);
+	  pPurch = (totalPrice.intValue() / 1000);
+	  
+	 
+	  //asignar
+	  int pCust = customer.getpoints();
 			 
-			    customer.setpoints(points);
+			    customer.setpoints(pPurch + pCust);
 		
-		
-
-		
-*/
-			     return points;
-}
+			    
+			    return pPurch + pCust;
+		}
 }
