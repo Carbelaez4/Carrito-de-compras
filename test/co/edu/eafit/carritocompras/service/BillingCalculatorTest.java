@@ -56,6 +56,19 @@ public class BillingCalculatorTest {
 	Assert.assertEquals(p.getTotalPrice().intValue()/(1000), pointsSer.calculatePoints(p, c));
 	} 
 	
+	@Test
+	public void testcalculateDiscountPunto() {
+	     
+		if (c.getpoints()>1000){
+		PointsService pointsSer = Mockito.mock(PointsService.class);
+		float discountPunt = 0.2f;
+		
+		
+		Mockito.when(pointsSer.calculateDiscountPunto(p, c)).thenReturn(p.getTotalPrice().floatValue()*discountPunt);
+		Assert.assertEquals(p.getTotalPrice().floatValue()*discountPunt , pointsSer.calculateDiscountPunto(p, c));
+		}
+		
+	}
 	}
 	
 

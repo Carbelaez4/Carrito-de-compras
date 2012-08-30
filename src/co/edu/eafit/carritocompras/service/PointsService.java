@@ -29,4 +29,15 @@ public class PointsService {
 			    
 			    return pPurch + pCust;
 		}
+		 
+		 
+		 public float calculateDiscountPunto (Purchase purchase, Customer customer) {
+			 
+			//int pCust = customer.getpoints();
+			float DiscountPunt = 0;
+			
+			 
+			 
+			 return  DiscountPunt; 
+		 }
 }
