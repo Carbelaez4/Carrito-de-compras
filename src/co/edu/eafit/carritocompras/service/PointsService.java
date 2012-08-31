@@ -33,11 +33,22 @@ public class PointsService {
 		 
 		 public float calculateDiscountPunto (Purchase purchase, Customer customer) {
 			 
-			//int pCust = customer.getpoints();
-			float DiscountPunt = 0;
+			int pCust = customer.getpoints();
+			 float DiscountPunt = 0;
+			 
+			 if (pCust >= 1000) {
+				 
+				 BigDecimal totalPrice;
+				  
+                 
+				 totalPrice = purchase.getTotalPrice();
+						 	  	
+				  DiscountPunt = (totalPrice.intValue() *0.20f);
 			
 			 
+			        }
 			 
-			 return  DiscountPunt; 
+			 return  DiscountPunt;
+			 
 		 }
 }
